@@ -1,0 +1,118 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width"><title>F1 Stats</title><link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png"><!--[if IE]><link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png"><![endif]--><link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png"><link rel="manifest" href="/manifest.json"><link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg" color="#2c2c2c"><link rel="shortcut icon" href="/favicon.ico"><meta name="msapplication-TileColor" content="#2c2c2c"><meta name="msapplication-config" content="/browserconfig.xml"><meta name="theme-color" content="#2c2c2c"><meta name="description" content="Enter the world of F1 Stats. Your go-to source for the latest GP results and statistics."><meta name="image" content="/img/social-banner.png"><meta itemprop="name" content="F1 Stats"><meta itemprop="description" content="Enter the world of F1 Stats. Your go-to source for the latest GP results and statistics."><meta itemprop="image" content="/img/social-banner.png"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="F1 Stats"><meta name="twitter:description" content="Enter the world of F1 Stats. Your go-to source for the latest GP results and statistics."><meta name="twitter:image:src" content="/img/social-banner.png"><meta name="twitter:image:alt" content="F1 Stats Logo"><meta name="og:title" content="F1 Stats"><meta name="og:description" content="Enter the world of F1 Stats. Your go-to source for the latest GP results and statistics."><meta name="og:image" content="/img/social-banner.png"><meta name="og:url" content="/"><meta name="og:site_name" content="F1 Stats"><meta name="og:locale" content="en_GB"><meta name="og:type" content="website"><meta name="color-scheme" content="dark"><style type="text/css">body {
+      background-color: #2c2c2c;
+      background-image: url('/img/bg.png');
+      background-repeat: repeat;
+    }
+
+    .spinner {
+      align-items: center;
+      display: none;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: center;
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .spinner.active {
+      display: flex;
+    }
+
+    .spinner--app {
+      display: flex;
+      height: 100%;
+    }
+
+    .spinner__inner {
+      display: block;
+      height: 24px;
+      position: relative;
+      width: 24px;
+    }
+
+    body>.spinner {
+      display: flex;
+    }
+
+    .app+.spinner {
+      display: none;
+    }
+
+    .spinner__inner::before,
+    .spinner__inner::after {
+      background-color: rgba(237, 28, 26, 0.5);
+      border-radius: 50%;
+      content: '';
+      height: 100%;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      transform-origin: center;
+      width: 100%;
+    }
+
+    .spinner--app .spinner__inner::before,
+    .spinner--app .spinner__inner::after {
+      height: 18px;
+      width: 18px;
+    }
+
+    .spinner__inner::before {
+      animation: spinner__inner 0.8s infinite ease-in-out;
+    }
+
+    .spinner__inner::after {
+      animation: spinner__inner 0.8s infinite ease-in reverse;
+    }
+
+    .spinner__text {
+      font-size: 14px;
+      line-height: 1;
+      margin-top: 1.75em;
+    }
+
+    .spinner--show-seasons {
+      display: block;
+      height: 6px;
+      left: auto;
+      opacity: 0;
+      right: 1rem;
+      top: calc(50% - 3px);
+      transition: opacity 0.15s ease-out;
+      width: 6px;
+    }
+
+    .spinner--show-comparison {
+      left: 0.667rem;
+      top: calc(50% - 3px);
+      display: block;
+      height: 6px;
+      opacity: 0;
+      transition: opacity 0.15s ease-out;
+      width: 6px;
+    }
+
+    .spinner--show-seasons.active,
+    .spinner--show-comparison.active {
+      opacity: 1;
+    }
+
+    .spinner--show-comparison .spinner__inner,
+    .spinner--show-seasons .spinner__inner {
+      height: 6px;
+      width: 6px;
+    }
+
+    @keyframes spinner__inner {
+      0% {
+        transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+      }
+
+      100% {
+        transform: translate3d(-50%, -50%, 0) scale3d(2.8, 2.8, 2.8);
+      }
+    }</style><link href="/css/app.df145487.css" rel="preload" as="style"><link href="/css/chunk-vendors.2d58b306.css" rel="preload" as="style"><link href="/js/app.8dbffda6.js" rel="preload" as="script"><link href="/js/chunk-vendors.901cd160.js" rel="preload" as="script"><link href="/css/chunk-vendors.2d58b306.css" rel="stylesheet"><link href="/css/app.df145487.css" rel="stylesheet"><link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#4DBA87"><meta name="apple-mobile-web-app-capable" content="no"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="f1-stats"><link rel="apple-touch-icon" href="/img/icons/apple-touch-icon-152x152.png"><link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#4DBA87"><meta name="msapplication-TileImage" content="/img/icons/msapplication-icon-144x144.png"><meta name="msapplication-TileColor" content="#000000"></head><body><noscript><strong>We're sorry but F1 Stats doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><div class="spinner"><div class="spinner__inner"></div></div><script src="/js/chunk-vendors.901cd160.js"></script><script src="/js/app.8dbffda6.js"></script></body></html>
