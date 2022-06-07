@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.467ea3fdbb458870d8e10690a01ab995.js"
+  "/precache-manifest.6a7e57dfa39be8d78f79ba7fa1513173.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "f1-stats"});

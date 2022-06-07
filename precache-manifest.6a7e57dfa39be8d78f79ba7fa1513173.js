@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/browserconfig.xml"
   },
   {
-    "revision": "7d56ee05509a43cf4fb5",
-    "url": "/css/app.df145487.css"
+    "revision": "a8c441c09394adc6e489",
+    "url": "/css/app.3b8fd258.css"
   },
   {
     "revision": "7f84fb94351b326ed5e5",
@@ -288,19 +288,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/thunder.9d68045e.svg"
   },
   {
-    "revision": "08a70e51927301393de3b0d533514067",
+    "revision": "227bc76d40868b276e3061d37adce81b",
     "url": "/index.html"
   },
   {
-    "revision": "7d56ee05509a43cf4fb5",
-    "url": "/js/app.8dbffda6.js"
+    "revision": "a8c441c09394adc6e489",
+    "url": "/js/app.6a3348d8.js"
   },
   {
     "revision": "7f84fb94351b326ed5e5",
     "url": "/js/chunk-vendors.901cd160.js"
   },
   {
-    "revision": "47578789412286b78bb8465355f7b701",
+    "revision": "276f2c7d86fe811bbb60d06799619044",
     "url": "/manifest.json"
   },
   {
